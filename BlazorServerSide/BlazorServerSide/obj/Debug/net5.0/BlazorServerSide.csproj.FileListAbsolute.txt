@@ -61,3 +61,15 @@ C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5
 C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Controls\DateComponent.razor.g.cs
 C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\bin\Debug\net5.0\BlazorComponentUtilities.dll
 C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Controls\DateComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Pages\OrderEntryComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Pages\OrderEntryComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Controls\TitleComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Controls\TitleComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Pages\TeamComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Pages\TeamsComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Pages\TeamComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Pages\TeamsComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Controls\CounterComponent1.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Controls\CounterComponent2.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Controls\CounterComponent1.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Controls\CounterComponent2.razor.g.cs

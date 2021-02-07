@@ -97,8 +97,7 @@ using BlazorServerSide.BaseComponents;
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/sales")]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/salesperson")]
-    public partial class SalesComponent : DateTimeBaseComponent
+    public partial class SalesComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)

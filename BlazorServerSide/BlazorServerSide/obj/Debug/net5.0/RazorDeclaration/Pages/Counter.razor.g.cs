@@ -105,7 +105,7 @@ using BlazorServerSide.BaseComponents;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Pages\Counter.razor"
+#line 16 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Pages\Counter.razor"
        
     private int currentCount = 0;
 

@@ -104,7 +104,7 @@ using BlazorServerSide.BaseComponents;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Shared\NavMenu.razor"
+#line 44 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
