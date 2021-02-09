@@ -83,15 +83,15 @@ using BlazorServerSide.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\_Imports.razor"
-using BlazorServerSide.BaseComponents;
+#line 11 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\_Imports.razor"
+using BlazorServerSide.Controls;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\_Imports.razor"
-using BlazorServerSide.Controls;
+#line 12 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\_Imports.razor"
+using BlazorServerSide.BaseComponents;
 
 #line default
 #line hidden
@@ -105,7 +105,7 @@ using BlazorServerSide.Controls;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 15 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Pages\Counter.razor"
+#line 16 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Pages\Counter.razor"
        
     private int currentCount = 0;
 
