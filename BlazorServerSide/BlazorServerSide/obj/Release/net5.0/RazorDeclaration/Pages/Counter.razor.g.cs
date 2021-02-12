@@ -96,7 +96,6 @@ using BlazorServerSide.BaseComponents;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -105,14 +104,24 @@ using BlazorServerSide.BaseComponents;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 16 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Pages\Counter.razor"
+#line 17 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Pages\Counter.razor"
        
+    [Parameter]
+    public EventCallback<int> SetCurrentCount { get; set; }
+
+    [Parameter]
+    public Action<int> SetCount { get; set; }
+
     private int currentCount = 0;
 
     private void IncrementCount()
     {
         currentCount++;
+        SetCurrentCount.InvokeAsync(currentCount);
     }
+
+    private ChildComponent child;
+
 
 #line default
 #line hidden

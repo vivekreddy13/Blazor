@@ -104,9 +104,8 @@ using BlazorServerSide.BaseComponents;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 8 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Controls\CounterComponent2.razor"
+#line 5 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\Controls\CounterComponent2.razor"
        
-
     [CascadingParameter(Name ="Counter")]
     public int CounterValue { get; set; }
 

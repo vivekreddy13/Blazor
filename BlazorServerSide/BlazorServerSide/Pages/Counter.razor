@@ -1,23 +1,51 @@
-﻿@page "/counter"
-
-
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
-<br />
-<br />
-
-<CascadingValue Name="Counter" Value="@currentCount">
+﻿<CascadingValue Name="Counter" Value="@currentCount">
     <CascadingValue Name="TitleColor" Value="@("blue")" IsFixed="true">
         <CounterComponent1></CounterComponent1>
     </CascadingValue>
 </CascadingValue>
+<br />
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<br />
+<br />
+<button class="button" @onclick="(()=>
+                                 {
+                                     child.Show();
+
+                                 })">
+    Show Child
+</button>
+<ChildComponent @ref="child"></ChildComponent>
+<br/>
+<br/>
+<button class="button" @onclick="(()=>
+                                 {
+                                     dialog.Show();
+
+                                 })">
+    Show Dialog
+</button>
+<DialogComponent @ref="dialog"></DialogComponent>
+<br />
+<br />
+
+
 
 @code {
+    [Parameter]
+    public EventCallback<int> SetCurrentCount { get; set; }
+
+    [Parameter]
+    public Action<int> SetCount { get; set; }
+
     private int currentCount = 0;
 
     private void IncrementCount()
     {
         currentCount++;
+        SetCurrentCount.InvokeAsync(currentCount);
     }
+
+    private ChildComponent child;
+    private DialogComponent dialog;
+
 }

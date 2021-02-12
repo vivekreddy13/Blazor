@@ -1,12 +1,8 @@
-﻿<div class="ml-5">
-    <h3 style="color:@Color">Counter: @CounterValue</h3>
-    <p>
-        Count: @CounterValue
-    </p>
+﻿<div>
+    <p style="color:@Color">Current Count: @CounterValue</p>
 </div>
 
 @code {
-
     [CascadingParameter(Name ="Counter")]
     public int CounterValue { get; set; }
 

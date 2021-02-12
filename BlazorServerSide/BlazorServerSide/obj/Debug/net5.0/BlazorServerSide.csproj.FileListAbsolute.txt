@@ -73,3 +73,9 @@ C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5
 C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Controls\CounterComponent2.razor.g.cs
 C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Controls\CounterComponent1.razor.g.cs
 C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Controls\CounterComponent2.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Pages\ParentComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Pages\ParentComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Controls\ChildComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Controls\ChildComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\RazorDeclaration\Controls\DialogComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorServerSide\obj\Debug\net5.0\Razor\Controls\DialogComponent.razor.g.cs
