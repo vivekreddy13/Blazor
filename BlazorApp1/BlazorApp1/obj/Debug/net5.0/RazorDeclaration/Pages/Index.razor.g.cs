@@ -82,6 +82,13 @@ using BlazorApp1.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\_Imports.razor"
+using BlazorApp1.Controls;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -90,6 +97,36 @@ using BlazorApp1.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 34 "C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\Pages\Index.razor"
+ 
+    private List<Employee> employees;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        employees = new List<Employee>();
+
+        employees.AddRange(new Employee[3] {
+                new Employee { Id = 1, Name = "John Doe", Title = "Developer", Department = "Dev" },
+                new Employee { Id = 2, Name = "Jane Doe", Title = "Developer", Department = "Dev" },
+                new Employee { Id = 3, Name = "Jeff Thomas", Title = "Developer", Department = "Dev" },
+                });
+    }
+
+    public class Employee
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Title { get; set; }
+        public string Department { get; set; }
+    }
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

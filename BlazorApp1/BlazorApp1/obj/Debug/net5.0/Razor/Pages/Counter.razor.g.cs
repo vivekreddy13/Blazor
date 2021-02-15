@@ -79,6 +79,13 @@ using BlazorApp1.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\_Imports.razor"
+using BlazorApp1.Controls;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {

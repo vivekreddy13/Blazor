@@ -56,3 +56,7 @@ C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\obj\Debug\net5.0\ref\Blazo
 C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\obj\Debug\net5.0\BlazorApp1.pdb
 C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\obj\Debug\net5.0\BlazorApp1.genruntimeconfig.cache
 C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\obj\Debug\net5.0\BlazorApp1.csproj.CopyComplete
+C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Controls\FieldComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\obj\Debug\net5.0\Razor\Controls\FieldComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Controls\GridAutoComponent.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorApp1\BlazorApp1\obj\Debug\net5.0\Razor\Controls\GridAutoComponent.razor.g.cs
