@@ -1266,3 +1266,5 @@ C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\obj\Debu
 C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\obj\Debug\net5.0\scopedcss\projectbundle\BlazorApp2.bundle.scp.css
 C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\obj\Debug\net5.0\BlazorApp2.RazorTargetAssemblyInfo.cache
 C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\obj\Debug\net5.0\BlazorApp2.csproj.CopyComplete
+C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\obj\Debug\net5.0\RazorDeclaration\Pages\Component.razor.g.cs
+C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\obj\Debug\net5.0\Razor\Pages\Component.razor.g.cs

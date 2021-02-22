@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorApp2.Controls
+namespace BlazorApp2.Pages
 {
     #line hidden
     using System;
@@ -89,7 +89,7 @@ using BlazorApp2.Controls;
 #line default
 #line hidden
 #nullable disable
-    public partial class RepeaterComponent<TItem> : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Component : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,24 +97,26 @@ using BlazorApp2.Controls;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 18 "C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\Controls\RepeaterComponent.razor"
- 
-    [Parameter]
-    public RenderFragment Header { get; set; }
+#line 10 "C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\Pages\Component.razor"
+        
 
     [Parameter]
-    public RenderFragment<TItem> Row { get; set; }
+    public RenderFragment BodyTemplate { get; set; }
 
     [Parameter]
-    public RenderFragment Footer { get; set; }
+    public int Counter { get; set; }
 
-    [Parameter]
-    public RenderFragment<TItem> EditTemplate { get; set; }
 
-    [Parameter]
-    public List<TItem> Items { get; set; }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        Console.WriteLine($"Child - OnAfterRender at {DateTime.Now.ToString("hh:MM:ss:fff")}");
+    }
 
-    public TItem ItemToEdit { get; set; }
+    private void ClickMe()
+    {
+
+    }
 
 
 #line default

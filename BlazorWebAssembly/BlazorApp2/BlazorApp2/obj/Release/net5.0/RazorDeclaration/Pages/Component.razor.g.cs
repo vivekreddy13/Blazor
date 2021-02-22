@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorApp2.Controls
+namespace BlazorApp2.Pages
 {
     #line hidden
     using System;
@@ -89,37 +89,13 @@ using BlazorApp2.Controls;
 #line default
 #line hidden
 #nullable disable
-    public partial class RepeaterComponent<TItem> : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Component : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 18 "C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\Controls\RepeaterComponent.razor"
- 
-    [Parameter]
-    public RenderFragment Header { get; set; }
-
-    [Parameter]
-    public RenderFragment<TItem> Row { get; set; }
-
-    [Parameter]
-    public RenderFragment Footer { get; set; }
-
-    [Parameter]
-    public RenderFragment<TItem> EditTemplate { get; set; }
-
-    [Parameter]
-    public List<TItem> Items { get; set; }
-
-    public TItem ItemToEdit { get; set; }
-
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

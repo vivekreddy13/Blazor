@@ -89,6 +89,13 @@ using BlazorApp2.Controls;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\Pages\Counter.razor"
+using System.Timers;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,13 +105,40 @@ using BlazorApp2.Controls;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\Pages\Counter.razor"
+#line 18 "C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\Pages\Counter.razor"
        
     private int currentCount = 0;
+    private Timer timer;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        timer = new Timer(2000);
+        timer.Elapsed += OnTimedEvent;
+        timer.Enabled = true;
+    }
+
+    private void OnTimedEvent(object source,ElapsedEventArgs e)
+    {
+        IncrementCount();
+        Console.WriteLine($"Counter Value: {this.currentCount}");
+    }
 
     private void IncrementCount()
     {
         currentCount++;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        Console.WriteLine($"counter - OnAfterRender at {DateTime.Now.ToString("hh:MM:ss:fff")}");
+    }
+
+    private void ClickBody()
+    {
+
     }
 
 #line default

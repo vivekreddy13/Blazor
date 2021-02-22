@@ -98,8 +98,9 @@ using BlazorApp2.Controls;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\Pages\Index.razor"
+#line 42 "C:\Users\vivek\OneDrive\Desktop\BlazorWebAssembly\BlazorApp2\BlazorApp2\Pages\Index.razor"
  
+    private RepeaterComponent<Customer> repeater;
     private List<Customer> customers;
 
     protected override void OnInitialized()
@@ -113,6 +114,11 @@ using BlazorApp2.Controls;
             new Customer { CompanyName="DEF Company", ContactName="Thomas Train", PhoneNumber="222333111" },
             new Customer { CompanyName="GHI Company", ContactName="John Doe", PhoneNumber="333111222" }
         });
+    }
+
+    private void EditCustomer(Customer customer)
+    {
+        repeater.ItemToEdit = customer;
     }
 
 

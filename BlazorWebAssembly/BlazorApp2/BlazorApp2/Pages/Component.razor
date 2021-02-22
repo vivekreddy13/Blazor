@@ -1,0 +1,30 @@
+﻿<h3>Component</h3>
+
+Counter value: @Counter
+
+<button @onclick="ClickMe">click me</button>
+
+<br/><br/>
+@BodyTemplate
+
+@code { 
+
+    [Parameter]
+    public RenderFragment BodyTemplate { get; set; }
+
+    [Parameter]
+    public int Counter { get; set; }
+
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        Console.WriteLine($"Child - OnAfterRender at {DateTime.Now.ToString("hh:MM:ss:fff")}");
+    }
+
+    private void ClickMe()
+    {
+
+    }
+
+}
