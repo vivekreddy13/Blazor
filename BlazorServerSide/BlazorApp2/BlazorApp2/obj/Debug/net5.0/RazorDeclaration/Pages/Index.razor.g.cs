@@ -98,7 +98,7 @@ using BlazorApp2.Controls;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorApp2\BlazorApp2\Pages\Index.razor"
+#line 9 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\BlazorApp2\BlazorApp2\Pages\Index.razor"
       
 
     public override Task SetParametersAsync(ParameterView parameters)
@@ -128,10 +128,6 @@ using BlazorApp2.Controls;
         base.OnAfterRender(firstRender);
     }
 
-    private void ClickMe()
-    {
-
-    }
 
 #line default
 #line hidden

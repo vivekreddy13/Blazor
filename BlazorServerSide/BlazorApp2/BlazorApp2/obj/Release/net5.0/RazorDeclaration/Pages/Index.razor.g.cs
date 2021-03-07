@@ -128,6 +128,7 @@ using BlazorApp2.Controls;
         base.OnAfterRender(firstRender);
     }
 
+
 #line default
 #line hidden
 #nullable disable
