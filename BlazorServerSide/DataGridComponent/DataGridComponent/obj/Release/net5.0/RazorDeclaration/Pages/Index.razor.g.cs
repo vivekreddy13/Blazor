@@ -105,8 +105,9 @@ using DataGridComponent.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 26 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Pages\Index.razor"
+#line 23 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Pages\Index.razor"
       
+
     private DataGridComponent<Employee> grid;
     private List<Employee> listEmployees;
     private List<ColumnDefinition> columnsDefinition;

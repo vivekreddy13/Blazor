@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace DataGridComponent.Controls
+namespace DataGridComponent.Pages
 {
     #line hidden
     using System;
@@ -96,7 +96,8 @@ using DataGridComponent.Configuration;
 #line default
 #line hidden
 #nullable disable
-    public partial class DataGridComponent<TItem> : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
+    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,35 +105,14 @@ using DataGridComponent.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 117 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Controls\DataGridComponent.razor"
+#line 9 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Pages\Counter.razor"
        
+    private int currentCount = 0;
 
-    [Parameter]
-    public List<TItem> DataItems { get; set; }
-
-    [Parameter]
-    public List<ColumnDefinition> Columns { get; set; }
-
-    [Parameter]
-    public PagingConfig Paging { get; set; }
-
-    [Parameter]
-    public int CurrentPageNumber { get; set; } = 1;
-
-    [Parameter]
-    public RenderFragment CustomPager { get; set; }
-
-    public void GoToPrevPage()
+    private void IncrementCount()
     {
-        CurrentPageNumber = Paging.PrevPageNumber(CurrentPageNumber);
+        currentCount++;
     }
-
-    public void GoToNextPage()
-    {
-        CurrentPageNumber = Paging.NextPageNumber(CurrentPageNumber, DataItems.Count);
-    }
-
-    public int MaxPageNumber { get => Paging.MaxPageNumber(DataItems.Count); }
 
 #line default
 #line hidden

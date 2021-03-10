@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace DataGridComponent.Controls
+namespace DataGridComponent.Pages
 {
     #line hidden
     using System;
@@ -96,7 +96,15 @@ using DataGridComponent.Configuration;
 #line default
 #line hidden
 #nullable disable
-    public partial class DataGridComponent<TItem> : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 3 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Pages\FetchData.razor"
+using DataGridComponent.Data;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
+    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,39 +112,19 @@ using DataGridComponent.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 117 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Controls\DataGridComponent.razor"
+#line 39 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Pages\FetchData.razor"
        
+    private WeatherForecast[] forecasts;
 
-    [Parameter]
-    public List<TItem> DataItems { get; set; }
-
-    [Parameter]
-    public List<ColumnDefinition> Columns { get; set; }
-
-    [Parameter]
-    public PagingConfig Paging { get; set; }
-
-    [Parameter]
-    public int CurrentPageNumber { get; set; } = 1;
-
-    [Parameter]
-    public RenderFragment CustomPager { get; set; }
-
-    public void GoToPrevPage()
+    protected override async Task OnInitializedAsync()
     {
-        CurrentPageNumber = Paging.PrevPageNumber(CurrentPageNumber);
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
     }
-
-    public void GoToNextPage()
-    {
-        CurrentPageNumber = Paging.NextPageNumber(CurrentPageNumber, DataItems.Count);
-    }
-
-    public int MaxPageNumber { get => Paging.MaxPageNumber(DataItems.Count); }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
     }
 }
 #pragma warning restore 1591

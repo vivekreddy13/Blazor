@@ -8,10 +8,23 @@ Welcome to your new app.
 <br />
 <DataGridComponent TItem="Employee"
                    DataItems="listEmployees"
-                   Columns="columnsDefinition"></DataGridComponent>
+                   Columns="columnsDefinition"
+                   Paging="@(new PagingConfig {
+                                 Enabled = true,
+                                 CustomPager = true,
+                                 PageSize = 3
+                             })">
+    <CustomPager>
+        <button class="btn btn-primary" @onclick="PrevPage">Prev</button>
+        <span style="font-size:12px; color:grey">&nbsp;&nbsp;Page
+        <input type="number" max=@grid.MaxPageNumber min="1" @bind-value="@grid.CurrentPageNumber" />
+        of @grid.MaxPageNumber&nbsp;&nbsp;</span>
+        <button class="btn btn-primary" @onclick="NextPage">Next</button>
+    </CustomPager>
+</DataGridComponent>
 
 @code{
-
+    private DataGridComponent<Employee> grid;
     private List<Employee> listEmployees;
     private List<ColumnDefinition> columnsDefinition;
 
@@ -33,7 +46,7 @@ Welcome to your new app.
                 new ColumnDefinition { DataField = "Title", Caption = "Title" },
                 new ColumnDefinition { DataField = "Department", Caption = "Department" },
                 new ColumnDefinition { DataField = "EmploymentDate", Caption = "Employee Date", Format = "dd/MM/yyyy", DataType = DataType.DateTime },
-                new ColumnDefinition { DataField = "Salary", Caption = "Annual Salary", DataType = DataType.Currency, Alignment = Alignment.Right, Format = "c" },
+                new ColumnDefinition { DataField = "Salary", Caption = "Annual Salary", DataType = DataType.Currency, Alignment = Alignment.Left, Format = "c" },
                 }
                 );
         }
@@ -75,12 +88,56 @@ Welcome to your new app.
                         Department = "IT",
                         EmploymentDate = DateTime.Now,
                         Salary = 100003,
+                    },
+                    new Employee
+                    {
+                        Name = "Vivek",
+                        Title = "Developer",
+                        Department = "Software Dev",
+                        EmploymentDate = DateTime.Now,
+                        Salary = 100004,
+                    },
+                    new Employee
+                    {
+                        Name = "Charan",
+                        Title = "DBA",
+                        Department = "IT",
+                        EmploymentDate = DateTime.Now,
+                        Salary = 100005,
+                    },
+                    new Employee
+                    {
+                        Name = "Manish",
+                        Title = "Developer",
+                        Department = "Software Dev",
+                        EmploymentDate = DateTime.Now,
+                        Salary = 100006,
+                    },
+                    new Employee
+                    {
+                        Name = "Rohan",
+                        Title = "DBA",
+                        Department = "IT",
+                        EmploymentDate = DateTime.Now,
+                        Salary = 100007,
                     }
             }
 
         );
         }
+
     }
+
+    private void PrevPage()
+    {
+        grid.GoToPrevPage();
+    }
+
+    private void NextPage()
+    {
+        grid.GoToNextPage();
+    }
+
 
     class Employee
     {

@@ -104,7 +104,7 @@ using DataGridComponent.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 117 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Controls\DataGridComponent.razor"
+#line 120 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Controls\DataGridComponent.razor"
        
 
     [Parameter]
@@ -131,8 +131,6 @@ using DataGridComponent.Configuration;
     {
         CurrentPageNumber = Paging.NextPageNumber(CurrentPageNumber, DataItems.Count);
     }
-
-    public int MaxPageNumber { get => Paging.MaxPageNumber(DataItems.Count); }
 
 #line default
 #line hidden

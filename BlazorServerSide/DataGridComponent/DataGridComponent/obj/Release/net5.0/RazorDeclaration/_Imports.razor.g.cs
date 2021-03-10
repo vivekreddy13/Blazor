@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace DataGridComponent.Controls
+namespace DataGridComponent
 {
     #line hidden
     using System;
@@ -96,47 +96,13 @@ using DataGridComponent.Configuration;
 #line default
 #line hidden
 #nullable disable
-    public partial class DataGridComponent<TItem> : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class _Imports : System.Object
     {
         #pragma warning disable 1998
-        protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
+        protected void Execute()
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 117 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Controls\DataGridComponent.razor"
-       
-
-    [Parameter]
-    public List<TItem> DataItems { get; set; }
-
-    [Parameter]
-    public List<ColumnDefinition> Columns { get; set; }
-
-    [Parameter]
-    public PagingConfig Paging { get; set; }
-
-    [Parameter]
-    public int CurrentPageNumber { get; set; } = 1;
-
-    [Parameter]
-    public RenderFragment CustomPager { get; set; }
-
-    public void GoToPrevPage()
-    {
-        CurrentPageNumber = Paging.PrevPageNumber(CurrentPageNumber);
-    }
-
-    public void GoToNextPage()
-    {
-        CurrentPageNumber = Paging.NextPageNumber(CurrentPageNumber, DataItems.Count);
-    }
-
-    public int MaxPageNumber { get => Paging.MaxPageNumber(DataItems.Count); }
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

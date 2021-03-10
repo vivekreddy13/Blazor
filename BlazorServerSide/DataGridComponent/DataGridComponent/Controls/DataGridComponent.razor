@@ -16,13 +16,13 @@
                         switch (column.Alignment)
                         {
                             case Alignment.Left:
-                                <th class="oi-align-left">@column.Caption</th>
+                                <th class="align-left">@column.Caption</th>
                                 break;
                             case Alignment.Center:
-                                <th class="oi-align-center">@column.Caption</th>
+                                <th class="align-center">@column.Caption</th>
                                 break;
                             case Alignment.Right:
-                                <th class="oi-align-right">@column.Caption</th>
+                                <th class="align-right">@column.Caption</th>
                                 break;
                             case Alignment.NotSet:
                             default:
@@ -43,7 +43,8 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var item in DataItems)
+        @foreach(var item in DataItems.Skip(Paging.NumOfItemsToSkip(CurrentPageNumber))
+            .Take(Paging.NumOfItemsToTake(DataItems.Count)))
         {
         <tr>
             @foreach (var column in Columns)
@@ -93,11 +94,52 @@
         }
     </tbody>
 </table>
+<div class="level">
+        <div class="level-left">
+            <div class="level-item">
+                @if (Paging != null && Paging.Enabled)
+                {
+                    @if (Paging.CustomPager)
+                    {
+                        @CustomPager
+                    }
+                    else
+                    {
+                        <span style="font-size:14px; cursor:pointer" @onclick="GoToPrevPage"><b>&lt;Previous </b></span>
+                        <span style="font-size:12px; color:grey">&nbsp;&nbsp;Page @CurrentPageNumber of @Paging.MaxPageNumber(DataItems.Count)&nbsp;&nbsp;</span>
+                        <span style="font-size:14px; cursor:pointer" @onclick="GoToNextPage"><b>Next &gt;</b></span>
+                    }
+                }
+            </div>
+    </div>
+</div>
 
 @code {
 
-                    [Parameter]
-                    public List<TItem> DataItems { get; set; }
-                    [Parameter]
-                    public List<ColumnDefinition> Columns { get; set; }
-                }
+    [Parameter]
+    public List<TItem> DataItems { get; set; }
+
+    [Parameter]
+    public List<ColumnDefinition> Columns { get; set; }
+
+    [Parameter]
+    public PagingConfig Paging { get; set; }
+
+    [Parameter]
+    public int CurrentPageNumber { get; set; } = 1;
+
+    [Parameter]
+    public RenderFragment CustomPager { get; set; }
+
+    public void GoToPrevPage()
+    {
+        CurrentPageNumber = Paging.PrevPageNumber(CurrentPageNumber);
+    }
+
+    public void GoToNextPage()
+    {
+        CurrentPageNumber = Paging.NextPageNumber(CurrentPageNumber, DataItems.Count);
+    }
+
+    public int MaxPageNumber { get => Paging.MaxPageNumber(DataItems.Count); }
+}
