@@ -16,17 +16,17 @@
                         switch (column.Alignment)
                         {
                             case Alignment.Left:
-                                <th class="align-left">@column.Caption</th>
+                                <th class="align-left">@column.Caption<span style="float:right" class="@(SortClass(column))"></span></th>
                                 break;
                             case Alignment.Center:
-                                <th class="align-center">@column.Caption</th>
+                                <th class="align-center">@column.Caption<span style="float:right" class="@(SortClass(column))"></span></th>
                                 break;
                             case Alignment.Right:
-                                <th class="align-right">@column.Caption</th>
+                                <th class="align-right">@column.Caption<span style="float:right" class="@(SortClass(column))"></span></th>
                                 break;
                             case Alignment.NotSet:
                             default:
-                                <th>@column.Caption</th>
+                                <th>@column.Caption<span style="float:right" class="@(SortClass(column))"></span></th>
                                 break;
                         }
                     }
@@ -34,6 +34,7 @@
                     {
                         <th>
                             @column.Caption
+                            <span style="float:right" class="@(SortClass(column))"></span>
                         </th>
                     }
 
@@ -142,4 +143,13 @@
     }
 
     public int MaxPageNumber { get => Paging.MaxPageNumber(DataItems.Count); }
+
+    private void SortClass(ColumnDefinition column)
+    {
+        if(column.SortDirection != SortDirection.NotSet)
+        {
+            return $"sort {column.SortDirection.ToString().ToLower()}";
+        }
+        return "no-sort"
+    }
 }

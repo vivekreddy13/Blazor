@@ -105,7 +105,7 @@ using DataGridComponent.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 26 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Pages\Index.razor"
+#line 31 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Pages\Index.razor"
       
     private DataGridComponent<Employee> grid;
     private List<Employee> listEmployees;
@@ -125,7 +125,7 @@ using DataGridComponent.Configuration;
             columnsDefinition = new List<ColumnDefinition>();
             columnsDefinition.AddRange(
                 new ColumnDefinition[] {
-                new ColumnDefinition { DataField = "Name", Caption = "Name" },
+                new ColumnDefinition { DataField = "Name", Caption = "Name", SortDirection = SortDirection.Asc },
                 new ColumnDefinition { DataField = "Title", Caption = "Title" },
                 new ColumnDefinition { DataField = "Department", Caption = "Department" },
                 new ColumnDefinition { DataField = "EmploymentDate", Caption = "Employee Date", Format = "dd/MM/yyyy", DataType = DataType.DateTime },

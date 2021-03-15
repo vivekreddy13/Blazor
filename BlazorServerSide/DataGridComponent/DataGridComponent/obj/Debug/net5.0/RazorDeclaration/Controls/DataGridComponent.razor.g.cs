@@ -104,7 +104,7 @@ using DataGridComponent.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 117 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Controls\DataGridComponent.razor"
+#line 118 "C:\Users\vivek\OneDrive\Desktop\BlazorServerSide\DataGridComponent\DataGridComponent\Controls\DataGridComponent.razor"
        
 
     [Parameter]
@@ -133,6 +133,15 @@ using DataGridComponent.Configuration;
     }
 
     public int MaxPageNumber { get => Paging.MaxPageNumber(DataItems.Count); }
+
+    private void SortClass(ColumnDefinition column)
+    {
+        if(column.SortDirection != SortDirection.NotSet)
+        {
+            return $"sort {column.SortDirection.ToString().ToLower()}";
+        }
+        return "no-sort"
+    }
 
 #line default
 #line hidden

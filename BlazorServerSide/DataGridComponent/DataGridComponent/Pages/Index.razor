@@ -4,24 +4,29 @@
 
 Welcome to your new app.
 
-<br/>
-<br />
-<DataGridComponent TItem="Employee"
-                   DataItems="listEmployees"
-                   Columns="columnsDefinition"
-                   Paging="@(new PagingConfig {
+<br/><br />
+
+     <DataGridComponent @ref="grid"
+                        TItem="Employee"
+                        DataItems="listEmployees"
+                        Columns="columnsDefinition"
+                        Paging="@(new PagingConfig{
                                  Enabled = true,
                                  CustomPager = true,
                                  PageSize = 3
                              })">
-    <CustomPager>
-        <button class="btn btn-primary" @onclick="PrevPage">Prev</button>
-        <span style="font-size:12px; color:grey">&nbsp;&nbsp;Page
-        <input type="number" max=@grid.MaxPageNumber min="1" @bind-value="@grid.CurrentPageNumber" />
-        of @grid.MaxPageNumber&nbsp;&nbsp;</span>
-        <button class="btn btn-primary" @onclick="NextPage">Next</button>
-    </CustomPager>
-</DataGridComponent>
+
+         <CustomPager>
+             <button class="btn btn-primary" @onclick="PrevPage">Prev</button>
+             <span style="font-size:12px; color:grey">&nbsp;&nbsp;Page
+             <input type="number" max=@grid.MaxPageNumber min="1" @bind-value="@grid.CurrentPageNumber" />
+             of @grid.MaxPageNumber&nbsp;&nbsp;
+             </span>
+             <button class="btn btn-primary" @onclick="NextPage">Next</button>
+         </CustomPager>
+
+     </DataGridComponent>
+
 
 @code{
     private DataGridComponent<Employee> grid;
@@ -42,7 +47,7 @@ Welcome to your new app.
             columnsDefinition = new List<ColumnDefinition>();
             columnsDefinition.AddRange(
                 new ColumnDefinition[] {
-                new ColumnDefinition { DataField = "Name", Caption = "Name" },
+                new ColumnDefinition { DataField = "Name", Caption = "Name", SortDirection = SortDirection.Asc },
                 new ColumnDefinition { DataField = "Title", Caption = "Title" },
                 new ColumnDefinition { DataField = "Department", Caption = "Department" },
                 new ColumnDefinition { DataField = "EmploymentDate", Caption = "Employee Date", Format = "dd/MM/yyyy", DataType = DataType.DateTime },
